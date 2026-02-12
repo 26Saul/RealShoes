@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.css';
+import Map from "../../components/Map.jsx";
+
 
 function Home() {
 
@@ -29,7 +31,7 @@ function Home() {
       <h1>Welcome to RealShoes</h1>
       <p>This is the home page</p>
 
-       <div className="shoes-grid">
+      <div className="shoes-grid">
         {shoes.map(shoe => (
           <div key={shoe.id} className="shoe-card">
             <img src={shoe.image} alt={shoe.name} />
@@ -38,6 +40,8 @@ function Home() {
           </div>
         ))}
       </div>
+      <h2>Our Location</h2>
+      <Map />
     </div>
   );
 }

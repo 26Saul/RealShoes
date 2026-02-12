@@ -1,8 +1,8 @@
 .home-container {
-  max-width: 1400px;        /* Más ancho */
-  width: 90%;               /* Responsive */
-  margin: 60px auto;        /* Centrado horizontal */
-  padding: 60px 40px;       /* Más espacio interno */
+  max-width: 1400px;        
+  width: 90%;               
+  margin: 60px auto;        
+  padding: 60px 40px;       
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
@@ -16,21 +16,18 @@
   min-height: 100vh;
 }
 
-/* Título principal */
 .home-container h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #111827;
 }
 
-/* Subtexto */
 .home-container p {
   color: #6b7280;
   margin-bottom: 40px;
   font-size: 1.1rem;
 }
 
-/* Grid responsive */
 .shoes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -39,7 +36,6 @@
   margin: 0 auto;
 }
 
-/* Tarjeta */
 .shoe-card {
   background: #ffffff;
   border-radius: 16px;
@@ -49,20 +45,17 @@
   cursor: pointer;
 }
 
-/* Hover efecto elegante */
 .shoe-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagen */
 .shoe-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* Contenido */
 .shoe-card h3 {
   margin: 15px 0 10px;
   font-size: 1.3rem;
