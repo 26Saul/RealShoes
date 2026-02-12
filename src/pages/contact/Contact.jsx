@@ -1,5 +1,13 @@
+import React from 'react';
+import './Contact.css';
+
 function Contact() {
-  return <h1>Contact Page</h1>;
+  return (
+    <div className="contact-container">
+      <h1>Contacto</h1>
+      <p>Envíanos un mensaje</p>
+    </div>
+  );
 }
 
 export default Contact;
