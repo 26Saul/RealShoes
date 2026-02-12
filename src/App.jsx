@@ -1,21 +1,25 @@
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";      // exacto: carpeta "home", archivo "Home.jsx"
-import About from "./pages/about/About";   // carpeta "about", archivo "About.jsx"
-import Contact from "./pages/contact/Contact"; // carpeta "contact", archivo "Contact.jsx"
-
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="app-container">
+      <BrowserRouter>
+        <Header /> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer /> 
+      </BrowserRouter>
+    </div>
   );
 }
 
 export default App;
-

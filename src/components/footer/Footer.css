@@ -1,0 +1,60 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+
+  width: 100%;
+  margin-top: auto; /* asegura que esté abajo */
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Información legal */
+.footer-legal {
+  margin-bottom: 15px;
+}
+
+/* Redes sociales */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* separación entre iconos */
+  margin-bottom: 15px;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column; /* nombre arriba, icono abajo */
+  align-items: center;
+}
+
+.social-item span {
+  color: #fff;
+  margin-bottom: 5px; /* espacio entre el nombre y el icono */
+  font-size: 14px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+
+.footer-links a {
+  margin: 0 10px;
+}
