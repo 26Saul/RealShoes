@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Map from "../../components/Map.jsx";
+import Map from "../../components/Maps.jsx";
 
 
 function Home() {
