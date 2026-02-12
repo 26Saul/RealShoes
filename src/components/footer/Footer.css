@@ -1,9 +1,14 @@
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
   background-color: #222;
   color: #fff;
-  text-align: center;
-  padding: 20px;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-direction: column;
 }
 
 .footer-legal {
