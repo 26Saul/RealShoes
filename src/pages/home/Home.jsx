@@ -1,5 +1,10 @@
 function Home() {
-  return <h1>Home Page</h1>;
+  return (
+    <div>
+      <h1>Welcome to RealShoes</h1>
+      <p>This is the home page</p>
+    </div>
+  );
 }
 
 export default Home;
