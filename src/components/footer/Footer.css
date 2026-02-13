@@ -42,3 +42,14 @@
 .footer-social img:hover {
   transform: scale(1.2);
 }
+
+.footer-links {
+  display: flex;
+  gap: 24px;         
+  justify-content: center; 
+}
+
+.footer-links a {
+  color: #fff702;        
+  text-decoration: none; 
+}
