@@ -1,4 +1,8 @@
-# RealShoes 👟
+# RealShoes – Modern Shoe Store Landing Page 👟
+
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite&logoColor=white)
+![Status](https://img.shields.io/badge/Status-In%20progress-orange)
 
 RealShoes is a modern e‑commerce landing page for a fictional shoe store, built with React and Vite.  
 The site focuses on a clean UI, clear product presentation, and a simple contact flow with an interactive map.
@@ -44,24 +48,15 @@ The footer includes social media icons, links to the GitHub repository, the Figm
 - OpenStreetMap tiles (map data provider) [web:82][web:85]
 
 ---
-
 ## Third-Party Components
 
-This project uses the following third‑party libraries and services:
+| Library / Service  | Purpose                               | Link |
+| ------------------ | ------------------------------------- | ---- |
+| React Leaflet      | Interactive map components            | https://react-leaflet.js.org |
+| Leaflet            | Map rendering engine                  | https://leafletjs.com |
+| OpenStreetMap      | Map tiles / geographic data           | https://www.openstreetmap.org |
+| React Router DOM   | Client‑side routing                   | https://github.com/remix-run/react-router |
 
-- **React Leaflet** – React bindings for the Leaflet mapping library, used to render the interactive map with `MapContainer`, `TileLayer`, `Marker`, and `Popup`.  
-  - Docs: https://react-leaflet.js.org [web:81]  
-
-- **Leaflet** – Lightweight open‑source JavaScript library for interactive maps.  
-  - Website: https://leafletjs.com [web:85]  
-
-- **OpenStreetMap Tiles** – Free map tiles used in the `TileLayer` component (`https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`).  
-  - Info & usage policy: https://www.openstreetmap.org/copyright [web:82][web:85]  
-
-- **React Router DOM** – Handles navigation between pages such as Home, Privacy Policy, and Terms.  
-  - Repo: https://github.com/remix-run/react-router [file:1][file:19]
-
----
 
 ## Getting Started
 
