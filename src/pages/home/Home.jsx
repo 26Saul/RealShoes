@@ -74,7 +74,7 @@ function Home() {
 
       <div className="shoes-grid">
         {shoes.map((shoe, index) => (
-          <React.Fragment key={shoe.id}>
+          <>
             <div className="shoe-card">
               <img src={shoe.image} alt={shoe.name} />
               <h3>{shoe.name}</h3>
@@ -87,7 +87,7 @@ function Home() {
                 <p>Estos son nuestros productos estrella:</p>
               </div>
             )}
-          </React.Fragment>
+          </>
         ))}
       </div>
 

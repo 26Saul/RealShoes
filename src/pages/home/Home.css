@@ -1,3 +1,4 @@
+
 .home-container {
   max-width: 1400px;        
   width: 90%;               
@@ -128,8 +129,7 @@
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.1s ease,
-    box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .home-contact-button:hover {

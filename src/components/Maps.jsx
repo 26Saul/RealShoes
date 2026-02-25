@@ -4,9 +4,7 @@ import 'leaflet/dist/leaflet.css';
 function Map() {
   return (
     <MapContainer
-      center={[28.1235, -15.4363]}
-      zoom={13}
-      style={{ height: "400px", width: "100%", borderRadius: "15px" }}
+      center={[28.1235, -15.4363]} zoom={15} style={{ height: "400px", width: "100%", borderRadius: "15px" }}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
