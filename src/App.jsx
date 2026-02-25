@@ -7,6 +7,8 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Privacy from "./pages/Privacy.jsx";
 import Terms from "./pages/Terms.jsx";
+import Community from "./pages/community/Community.jsx";
+
 import "./App.css";
 
 function App() {
