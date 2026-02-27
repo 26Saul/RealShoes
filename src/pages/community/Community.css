@@ -1,4 +1,82 @@
-.community {
-  padding: 20px;
-  text-align: center;
+.community { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; min-height: 100vh; }
+header { text-align: center; margin-bottom: 2rem; }
+header h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 0.5rem; background: linear-gradient(45deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+header p { color: #666; font-size: 1.1rem; margin: 0 0 1rem 0; }
+
+.new-post-btn {
+  background: linear-gradient(45deg, #10b981, #059669);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.new-post-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(16,185,129,0.3); }
+
+.new-post-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+.new-post-form input, .new-post-form textarea, .new-post-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+.new-post-form input:focus, .new-post-form textarea:focus, .new-post-form select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+.new-post-form textarea { resize: vertical; min-height: 80px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+}
+.form-row button {
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filters { display: flex; justify-content: center; margin-bottom: 3rem; }
+.select { padding: 14px 24px; font-size: 1rem; border: 2px solid #e1e5e9; border-radius: 30px; background: white; cursor: pointer; min-width: 200px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+
+.card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08); transition: all 0.3s ease; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card-body { padding: 1.8rem; }
+.tag { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: white; margin-bottom: 1rem; }
+.tag.novedades { background: #10b981; }
+.tag.ayuda { background: #f59e0b; }
+.tag.reviews { background: #3b82f6; }
+.tag.ofertas { background: #ef4444; }
+
+.card h3 { margin: 0 0 0.8rem; font-size: 1.3rem; color: #1a1a1a; }
+.card p { color: #666; margin-bottom: 1.2rem; }
+.footer { display: flex; justify-content: space-between; font-size: 0.9rem; color: #888; }
+
+.loading, .empty { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; }
+.spinner { width: 50px; height: 50px; border: 4px solid #e2e8f0; border-top: 4px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 1rem; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+@media (max-width: 768px) { 
+  .form-row { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
 }
