@@ -17,11 +17,6 @@ The site focuses on a clean UI, clear product presentation, and a simple contact
 - [Third‑Party Components](#third-party-components)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Helpful Tutorials & Resources](#helpful-tutorials--resources)
-- [Roadmap / Future Improvements](#roadmap--future-improvements)
-- [Contact](#contact)
-- [Acknowledgments](#acknowledgments)
-
 ---
 
 ## About The Project
