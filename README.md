@@ -16,7 +16,6 @@ The site focuses on a clean UI, clear product presentation, and a simple contact
 - [Built With](#built-with)
 - [Third‑Party Components](#third-party-components)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 ---
 
 ## About The Project
