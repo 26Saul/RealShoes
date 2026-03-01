@@ -137,3 +137,14 @@
   transform: translateY(-1px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
+
+.home-toggle-button {
+  margin: 1rem 0 2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: #111827;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

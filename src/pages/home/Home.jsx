@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
+  const [showStarProducts, setShowStarProducts] = useState(true);
+
   const shoes = [
     {
       id: 1,
@@ -60,6 +62,8 @@ function Home() {
     },
   ];
 
+  const visibleShoes = showStarProducts ? shoes : shoes.slice(6);
+
   return (
     <div className="home-container">
       <h1>Bienvenido a RealShoes</h1>
@@ -71,8 +75,17 @@ function Home() {
         Estos son algunos de nuestros productos:
       </p>
 
+      <button
+        className="home-toggle-button"
+        onClick={() => setShowStarProducts(!showStarProducts)}
+      >
+        {showStarProducts
+          ? "Mostrar unicamente los productos estrellas "
+          : "Mostrar todos los productos "}
+      </button>
+
       <div className="shoes-grid">
-        {shoes.map((shoe, index) => (
+        {visibleShoes.map((shoe, index) => (
           <>
             <div className="shoe-card">
               <img src={shoe.image} alt={shoe.name} />
@@ -80,8 +93,7 @@ function Home() {
               <p>{shoe.description}</p>
             </div>
 
-            {/* Texto después de cada 6 productos */}
-            {(index + 1) % 6 === 0 && (
+            {(index + 1) % 6 === 0 && showStarProducts && (
               <div className="shoe-row-text">
                 <p>Estos son nuestros productos estrella:</p>
               </div>
@@ -90,9 +102,10 @@ function Home() {
         ))}
       </div>
 
-      <p className="home-contact-text"> Si le interesa algo, contacte con nosotros:</p>
+      <p className="home-contact-text">
+        Si le interesa algo, contacte con nosotros:
+      </p>
 
-      {/* Botón Contact */}
       <div className="home-contact-button-wrapper">
         <Link to="/contact" className="home-contact-button">
           Ir a Contacto
