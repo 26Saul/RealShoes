@@ -71,7 +71,7 @@ https://realshoes-ab18c.web.app
 Feed Notice RSS: https://realshoes-ab18c.web.app/rss.xml
 Feed Offer RSS: https://realshoes-ab18c.web.app/rssOffer.xml
 
-![Lector RSS mostrando mi feed](./public/Feeder.jpg)
+![Lector RSS mostrando mi feed](./public/Feeder.JPG)
 
 ### Installation
 
