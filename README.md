@@ -61,6 +61,16 @@ To get a local copy up and running, follow these steps.
 - Node.js (recommended LTS version)
 - npm
 
+## Deploy
+
+Project deployed on Firebase Hosting:
+https://realshoes-ab18c.web.app
+
+## RSS
+
+Feed Notice RSS: https://realshoes-ab18c.web.app/rss.xml
+Feed Offer RSS: https://realshoes-ab18c.web.app/rssOffer.xml
+
 ### Installation
 
 1. Clone the repository:

@@ -23,6 +23,7 @@ function Header() {
         <Link to="/about" onClick={() => setMenuOpen(false)}>Sobre Nosotros</Link>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link>
         <Link to="/community" onClick={() => setMenuOpen(false)}>Nuestra Comunidad</Link>
+        <Link to="/rss" onClick={() => setMenuOpen(false)}>RSS</Link>
 
       </nav>
     </header>

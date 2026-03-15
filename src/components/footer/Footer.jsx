@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-legal">
         © 2026 RealShoes. Todos los derechos reservados.
         {" "}
-        <Link to="/privacy">Política de Privacidad y Cookies</Link> | 
+        <Link to="/privacy">Política de Privacidad y Cookies</Link> |
         <Link to="/terms">Condiciones de Venta</Link>
       </div>
 
@@ -40,6 +40,13 @@ function Footer() {
             <img src="/icons/linkedin.svg" alt="LinkedIn" />
           </a>
         </div>
+        <div className="social-item">
+          <span>Rss</span>
+          <a href="/rss" target="_blank" rel="noreferrer">
+            <img src="/icons/rss.svg" alt="Rss" />
+          </a>
+        </div>
+
       </div>
 
       <div className="footer-links">

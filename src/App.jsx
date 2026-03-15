@@ -8,6 +8,7 @@ import Contact from "./pages/contact/Contact";
 import Privacy from "./pages/privacy/Privacy.jsx";
 import Terms from "./pages/terms/Terms.jsx";
 import Community from "./pages/community/Community.jsx";
+import RssInfo from "./pages/rss/RssInfo.Jsx";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/rss" element={<RssInfo />} />
           </Routes>
         </main>
         <Footer />

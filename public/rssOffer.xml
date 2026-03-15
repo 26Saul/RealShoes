@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>RealShoes - Modelos Especiales</title>
+    <link>https://realshoes-ab18c.web.app/</link>
+    <description>Modelos especiales de RealShoes.</description>
+
+    <item>
+      <title>Oferta 1</title>
+      <link>https://realshoes-ab18c.web.app/news/spring-sale</link>
+      <description>Ofertas seleccionadas.</description>
+    </item>
+  </channel>
+</rss>

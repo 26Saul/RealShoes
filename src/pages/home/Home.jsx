@@ -2,7 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+// Componente hijo que recibe props (title y subtitle)
+function HighlightsSection({ title, subtitle }) {
+  return (
+    <section className="home-highlights">
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+    </section>
+  );
+}
+
 function Home() {
+  // Variable de estado con sentido: controla qué productos se ven
   const [showStarProducts, setShowStarProducts] = useState(true);
 
   const shoes = [
@@ -62,11 +73,13 @@ function Home() {
     },
   ];
 
+  // Si showStarProducts es true, mostramos todos; si no, solo algunos (ej. a partir del 7)
   const visibleShoes = showStarProducts ? shoes : shoes.slice(6);
 
   return (
     <div className="home-container">
       <h1>Bienvenido a RealShoes</h1>
+
       <p className="home-subtitle">
         Bienvenido a RealShoes, tu tienda online especializada en zapatillas
         para el día a día.
@@ -75,18 +88,28 @@ function Home() {
         Estos son algunos de nuestros productos:
       </p>
 
+      {/* Componente hijo al que se le pasan props */}
+      <HighlightsSection
+        title="Modelos destacados de nuestra colección"
+        subtitle={
+          showStarProducts
+            ? "Ahora estás viendo todos los modelos, incluidos nuestros productos estrella."
+            : "Estás viendo una selección más reducida de nuestros modelos estrella."
+        }
+      />
+
       <button
         className="home-toggle-button"
         onClick={() => setShowStarProducts(!showStarProducts)}
       >
         {showStarProducts
-          ? "Mostrar unicamente los productos estrellas "
-          : "Mostrar todos los productos "}
+          ? "Mostrar únicamente los productos estrella"
+          : "Mostrar todos los productos"}
       </button>
 
       <div className="shoes-grid">
         {visibleShoes.map((shoe, index) => (
-          <>
+          <React.Fragment key={shoe.id}>
             <div className="shoe-card">
               <img src={shoe.image} alt={shoe.name} />
               <h3>{shoe.name}</h3>
@@ -98,7 +121,7 @@ function Home() {
                 <p>Estos son nuestros productos estrella:</p>
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
 

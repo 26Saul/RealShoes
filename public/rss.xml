@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>RealShoes - Novedades de la página de inicio</title>
+    <link>https://realshoes-ab18c.web.app/</link>
+    <description>
+      Actualizaciones y destacados de la página de inicio de RealShoes:
+      modelos estrella, colecciones y enlaces de contacto.
+    </description>
+    <language>es-ES</language>
+
+    <item>
+      <title>Bienvenida a RealShoes</title>
+      <link>https://realshoes-ab18c.web.app/</link>
+      <description>
+        Descubre RealShoes, tu tienda online especializada en zapatillas para
+        el día a día, con una selección cuidada de modelos clásicos y modernos.
+      </description>
+      <category>general</category>
+      <guid>https://realshoes-ab18c.web.app/#bienvenida</guid>
+    </item>
+
+    <item>
+      <title>Modelos destacados: Nike Air Max 90 Triple White</title>
+      <link>https://realshoes-ab18c.web.app/#air-max-90</link>
+      <description>
+        El icónico Nike Air Max 90 Triple White forma parte de nuestros
+        productos destacados, con un rango de precio habitual entre 120 y 150 €.
+      </description>
+      <category>modelos-destacados</category>
+      <guid>https://realshoes-ab18c.web.app/#air-max-90</guid>
+    </item>
+
+    <item>
+      <title>Selección urbana: Puma Suede Classic rojo</title>
+      <link>https://realshoes-ab18c.web.app/#puma-suede-classic</link>
+      <description>
+        Puma Suede Classic rojo, un clásico urbano con precio habitual entre
+        70 y 90 €, perfecto para un estilo casual del día a día.
+      </description>
+      <category>modelos-destacados</category>
+      <guid>https://realshoes-ab18c.web.app/#puma-suede-classic</guid>
+    </item>
+
+    <item>
+      <title>Estilo skate: Vans Old Skool amarillo</title>
+      <link>https://realshoes-ab18c.web.app/#vans-old-skool</link>
+      <description>
+        Vans Old Skool amarillo, un modelo llamativo con un precio habitual
+        de 75 a 95 €, ideal para quienes buscan un look más atrevido.
+      </description>
+      <category>modelos-destacados</category>
+      <guid>https://realshoes-ab18c.web.app/#vans-old-skool</guid>
+    </item>
+
+    <item>
+      <title>Clásicos atemporales: Adidas Superstar y Nike Air Force 1</title>
+      <link>https://realshoes-ab18c.web.app/#clasicos</link>
+      <description>
+        En la página de inicio encontrarás clásicos como Adidas Superstar
+        (90–110 €) y Nike Air Force 1 blanca (110–130 €), siempre presentes
+        entre los favoritos de nuestra comunidad.
+      </description>
+      <category>clasicos</category>
+      <guid>https://realshoes-ab18c.web.app/#clasicos</guid>
+    </item>
+
+    <item>
+      <title>Productos estrella de RealShoes</title>
+      <link>https://realshoes-ab18c.web.app/#productos-estrella</link>
+      <description>
+        Usa el conmutador de la página de inicio para mostrar únicamente los
+        productos estrella y ver una selección reducida de nuestros modelos
+        más buscados.
+      </description>
+      <category>productos-estrella</category>
+      <guid>https://realshoes-ab18c.web.app/#productos-estrella</guid>
+    </item>
+
+    <item>
+      <title>Contacto directo desde la página de inicio</title>
+      <link>https://realshoes-ab18c.web.app/contact</link>
+      <description>
+        Si te interesa algún modelo de los que ves en la página de inicio,
+        puedes acceder rápidamente a la sección de contacto para realizar
+        consultas o pedidos personalizados.
+      </description>
+      <category>contacto</category>
+      <guid>https://realshoes-ab18c.web.app/contact</guid>
+    </item>
+
+  </channel>
+</rss>
