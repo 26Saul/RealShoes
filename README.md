@@ -71,6 +71,8 @@ https://realshoes-ab18c.web.app
 Feed Notice RSS: https://realshoes-ab18c.web.app/rss.xml
 Feed Offer RSS: https://realshoes-ab18c.web.app/rssOffer.xml
 
+![Lector RSS mostrando mi feed](./docs/Feeder.jpg)
+
 ### Installation
 
 1. Clone the repository:
