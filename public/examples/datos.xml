@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <name>Air Max 90</name>
+    <brand>Nike</brand>
+    <category>Sneakers</category>
+    <price>129.99</price>
+    <stock>12</stock>
+    <image>https://ejemplo.com/nike-airmax90.jpg</image>
+  </product>
+  <product>
+    <name>Superstar</name>
+    <brand>Adidas</brand>
+    <category>Urban</category>
+    <price>99.95</price>
+    <stock>8</stock>
+    <image>https://ejemplo.com/adidas-superstar.jpg</image>
+  </product>
+</products>

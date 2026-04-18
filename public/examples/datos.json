@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Air Max 90",
+    "brand": "Nike",
+    "category": "Sneakers",
+    "price": 129.99,
+    "stock": 12,
+    "image": "https://ejemplo.com/nike-airmax90.jpg"
+  },
+  {
+    "name": "Superstar",
+    "brand": "Adidas",
+    "category": "Urban",
+    "price": 99.95,
+    "stock": 8,
+    "image": "https://ejemplo.com/adidas-superstar.jpg"
+  }
+]

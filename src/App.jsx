@@ -9,6 +9,7 @@ import Privacy from "./pages/privacy/Privacy.jsx";
 import Terms from "./pages/terms/Terms.jsx";
 import Community from "./pages/community/Community.jsx";
 import RssInfo from "./pages/rss/RssInfo.Jsx";
+import ImportExportPage from "./pages/ImportExport/ImportExportPage";
 
 import "./App.css";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} />
             <Route path="/rss" element={<RssInfo />} />
+            <Route path="/import-export" element={<ImportExportPage />} />
           </Routes>
         </main>
         <Footer />

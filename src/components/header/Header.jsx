@@ -24,7 +24,7 @@ function Header() {
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link>
         <Link to="/community" onClick={() => setMenuOpen(false)}>Nuestra Comunidad</Link>
         <Link to="/rss" onClick={() => setMenuOpen(false)}>RSS</Link>
-
+        <Link to="/import-export" onClick={() => setMenuOpen(false)}>Importar / Exportar</Link>
       </nav>
     </header>
   );

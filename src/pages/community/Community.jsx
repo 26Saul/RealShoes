@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { ref, onValue, off, push, set, update, remove } from 'firebase/database';
-import { db } from '../../firebase';
-import './Community.css';
+import React, { useState, useEffect } from "react";
+import { ref, onValue, push, set, update, remove } from "firebase/database";
+import { realtimeDb } from "../../services/firebase/firebase";
+import "./Community.css";
 
 function Community() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const [filter, setFilter] = useState('all');
-
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [category, setCategory] = useState('reviews');
-  const [author, setAuthor] = useState('Anónimo');
+  const [filter, setFilter] = useState("all");
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [category, setCategory] = useState("reviews");
+  const [author, setAuthor] = useState("Anónimo");
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState(null);
 
   useEffect(() => {
-    const postsRef = ref(db, 'posts');
+    const postsRef = ref(realtimeDb, "posts");
 
     const unsubscribe = onValue(postsRef, (snapshot) => {
       const data = snapshot.val();
@@ -38,34 +36,32 @@ function Community() {
       setLoading(false);
     });
 
-    return () => off(postsRef, 'value', unsubscribe);
+    return unsubscribe;
   }, []);
 
   const resetForm = () => {
-    setTitle('');
-    setContent('');
-    setCategory('reviews');
-    setAuthor('Anónimo');
+    setTitle("");
+    setContent("");
+    setCategory("reviews");
+    setAuthor("Anónimo");
     setEditingId(null);
   };
 
   const handleToggleForm = () => {
-
     if (!showForm) {
       resetForm();
     }
     setShowForm((prev) => !prev);
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!title.trim() || !content.trim()) return;
 
     try {
       if (editingId) {
-
-        const postRef = ref(db, `posts/${editingId}`);
+        const postRef = ref(realtimeDb, `posts/${editingId}`);
         await update(postRef, {
           title,
           content,
@@ -73,7 +69,6 @@ function Community() {
           author,
         });
       } else {
-
         const newPost = {
           title,
           content,
@@ -82,64 +77,66 @@ function Community() {
           likes: 0,
           createdAt: Date.now(),
         };
-        const postsRef = ref(db, 'posts');
-        await set(push(postsRef), newPost);
+
+        const postsRef = ref(realtimeDb, "posts");
+        const newPostRef = push(postsRef);
+        await set(newPostRef, newPost);
       }
 
       resetForm();
       setShowForm(false);
     } catch (error) {
-      console.error('Error guardando:', error);
+      console.error("Error guardando:", error);
     }
   };
 
   const handleEdit = (post) => {
     setEditingId(post.id);
-    setTitle(post.title || '');
-    setContent(post.content || '');
-    setCategory(post.category || 'reviews');
-    setAuthor(post.author || 'Anónimo');
+    setTitle(post.title || "");
+    setContent(post.content || "");
+    setCategory(post.category || "reviews");
+    setAuthor(post.author || "Anónimo");
     setShowForm(true);
   };
 
   const handleDelete = async (id) => {
     try {
-      const postRef = ref(db, `posts/${id}`);
+      const postRef = ref(realtimeDb, `posts/${id}`);
       await remove(postRef);
     } catch (error) {
-      console.error('Error borrando:', error);
+      console.error("Error borrando:", error);
     }
   };
 
   const filteredPosts = posts.filter(
-    (post) => filter === 'all' || post.category === filter
+    (post) => filter === "all" || post.category === filter
   );
 
   const getTagClass = (cat) => {
     switch (cat) {
-      case 'updates':
-        return 'tag updates';
-      case 'help':
-        return 'tag help';
-      case 'ofert':
-        return 'tag ofert';
-      case 'reviews':
+      case "updates":
+        return "tag updates";
+      case "help":
+        return "tag help";
+      case "ofert":
+        return "tag ofert";
+      case "reviews":
       default:
-        return 'tag reviews';
+        return "tag reviews";
     }
   };
 
   const getCategoryLabel = (cat) => {
     switch (cat) {
-      case 'updates':
-        return 'Actualizaciones';
-      case 'help':
-        return 'Ayuda';
-      case 'ofert':
-        return 'Ofertas';
-      case 'reviews':
+      case "updates":
+        return "Actualizaciones";
+      case "help":
+        return "Ayuda";
+      case "ofert":
+        return "Ofertas";
+      case "reviews":
       default:
-        return 'Reseñas';
+        return "Reseñas";
     }
   };
 
@@ -163,10 +160,10 @@ function Community() {
         </p>
         <button className="new-post-btn" onClick={handleToggleForm}>
           {showForm
-            ? 'Cerrar formulario'
+            ? "Cerrar formulario"
             : editingId
-            ? 'Editar publicación'
-            : 'Escribir nueva reseña'}
+            ? "Editar publicación"
+            : "Escribir nueva reseña"}
         </button>
       </header>
 
@@ -204,7 +201,7 @@ function Community() {
             />
 
             <button type="submit">
-              {editingId ? 'Guardar cambios' : 'Publicar'}
+              {editingId ? "Guardar cambios" : "Publicar"}
             </button>
           </div>
         </form>
@@ -248,14 +245,12 @@ function Community() {
 
                 <div className="footer">
                   <span>
-                    {post.author || 'Anónimo'}
+                    {post.author || "Anónimo"}
                     {post.createdAt &&
-                      ` · ${new Date(
-                        post.createdAt
-                      ).toLocaleDateString()}`}
+                      ` · ${new Date(post.createdAt).toLocaleDateString()}`}
                   </span>
 
-                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
                     <button type="button" onClick={() => handleEdit(post)}>
                       Editar
                     </button>
